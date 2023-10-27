@@ -20,6 +20,7 @@ public class BrowserFactory {
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--incognito");
+            options.addArguments("--remote-allow-origins=*");
             driver=new ChromeDriver(options);
 
         }else if(browser.equalsIgnoreCase("firefox")){
